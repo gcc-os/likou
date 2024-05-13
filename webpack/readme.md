@@ -3,4 +3,4 @@
 - node v16.15.1
 - webpack 4.47.0
 - webpack-cli 4.10.0
-- webpack-dev-server 4.15.2
+- webpack-dev-server 4.15.2 https://webpack.docschina.org/configuration/dev-server/

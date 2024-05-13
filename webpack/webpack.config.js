@@ -14,10 +14,16 @@ module.exports = {
         path: path.join(__dirname, 'dist')
     },
     devServer: {
+        allowedHosts: 'all',
         static: {
             directory: path.join(__dirname, '/dist'),
         },
-        compress: true,
-        port: 9000
+        client: {
+            overlay: true,
+            progress: true,
+        },
+        open: false,
+        compress: false,
+        port: 9000,
     }
 }
