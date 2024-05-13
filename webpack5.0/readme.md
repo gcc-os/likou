@@ -1,8 +1,8 @@
 ## 配置文件
+- webpack 5.x
 - node v16.15.1
-- webpack 4.47.0
-- webpack-cli 4.10.0
-- webpack-dev-server 4.15.2 https://webpack.docschina.org/configuration/dev-server/
+- webpack-cli 5.1.4
+- webpack-dev-server 5.0.4 https://webpack.docschina.org/configuration/dev-server/
 
 
 - Q: npm i xxx --legacy-peer-deps 忽略npm的各个三方包的共享机制，让无法共享的三方包自行安装自己需要的包版本
