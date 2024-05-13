@@ -3,7 +3,7 @@ const path = require('path')
 module.exports = {
     mode:'development',
     entry: {
-        main: './src/main.js',
+        main: './src/main.ts',
     },
     output: {
         // filename 定义打包的文件名称
@@ -14,9 +14,16 @@ module.exports = {
         path: path.join(__dirname, 'dist')
     },
     module: {
-        rules: [
-          { test: /\.ts$/, use: 'ts-loader' }
-        ]
+    rules: [
+        {
+            test: /\.tsx?$/,
+            use: 'ts-loader',
+            exclude: /node_modules/,
+        },
+        ],
+    },
+    resolve: {
+        extensions: ['.tsx', '.ts', '.js'],
     },
     devServer: {
         allowedHosts: 'all',
