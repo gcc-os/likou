@@ -15,13 +15,12 @@ function calMin(calString: string): Res {
     StanderArr.forEach(s => {
         arr.forEach((str:string, index) => {
             const _l = str.split(s);
-            if(_l.length > 1){
+            if(_l.length > 1){ // 拼上操作符
                 const _len = _l.length;
-                for(let l = _len-2; l >= 0; l--){
+                for(let l = _len-1; l > 0; l--){
                     _l.splice(l, 0, s)
                 }
                 list.splice(index, 1, _l)
-                // console.log("===str ",s, index, str, '---',list)
             }
         })
         const len = list.length;
@@ -32,7 +31,6 @@ function calMin(calString: string): Res {
                 list.splice(i, 1, ..._list);
             }
         }
-        // console.log('---',list)
         arr = JSON.parse(JSON.stringify(list));
     })
 
